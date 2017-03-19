@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ListView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_close">Close</string>
+    <string name="chevere">Estrella</string>
+</resources>
