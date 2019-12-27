@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Ninjas ninjas_datos[] = new Ninjas[]{
+        Ninjas[] ninjas_datos = new Ninjas[]{
                 new Ninjas(R.drawable.ic_star_black_18dp, R.drawable.ic_star_border_black_18dp, "mau"),
                 new Ninjas(R.drawable.ic_star_border_black_18dp, R.drawable.ic_star_black_18dp, "mario"),
                 new Ninjas(R.drawable.ic_star_black_18dp, R.drawable.ic_star_border_black_18dp, "merino"),
@@ -33,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
 
         NinjasAdapter adapter = new NinjasAdapter(this, R.layout.renglon, ninjas_datos);
 
-        ls = (ListView) findViewById(R.id.listView);
+        ls = findViewById(R.id.listView);
 
         ls.setAdapter(adapter);
         ls.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                TextView v = (TextView) arg1.findViewById(R.id.tv_1);
+                TextView v = arg1.findViewById(R.id.tv_1);
                 Toast.makeText(getApplicationContext(), v.getText(), Toast.LENGTH_SHORT).show();
             }
         });

@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class NinjasAdapter extends ArrayAdapter <Ninjas> {
     private Context context;
     private int layoutResourceId;
-    private Ninjas datos[] = null;
+    private Ninjas[] datos;
 
     public NinjasAdapter(Context context, int layoutResourceId, Ninjas[] datos) {
         super(context, layoutResourceId, datos);
